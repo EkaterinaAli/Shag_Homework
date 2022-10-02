@@ -1,5 +1,4 @@
 package homework17;
-
 public class Reader {
     private String fio;
     private int number;
@@ -9,7 +8,6 @@ public class Reader {
 
     public Reader ()
     {}
-
     public  Reader ( String fio, int number, String facultet, String date, long numberPhone){
         this.fio =fio;
         this.number = number;
@@ -17,7 +15,6 @@ public class Reader {
         this.date = date;
         this.numberPhone = numberPhone;
     }
-
     public String getFio() { return fio;}
     public void setFio(String fio) {this.fio = fio; }
     public int getNumber() {return number;}
@@ -35,15 +32,30 @@ public class Reader {
     public void takeBook (String nameBook){
         System.out.println(getFio() + " взял книги: " + nameBook);
     }
-    public void takeBook(Book book) {
-        System.out.println(getFio() + " взял книги: " + book.getNameBook());
+    public void takeBook(Book... books) {
+        System.out.print(getFio() + " взял книги: ");
+        for (Book b : books)
+        System.out.print( b.getNameBook() +", ");
+        System.out.println();
     }
     public void returnBook(int number) {
         System.out.println(getFio() + " вернул " + number + " книги.");
     }
     public void returnBook(String nameBook) {
         System.out.println(getFio() + " вернул следующие книги:" + nameBook);
-
+    }
+    public void returnBook(Book... books) {
+        System.out.print(getFio() + " вернул следующие книги: ");
+        for (Book b : books)
+            System.out.print( b.getNameBook() +", ");
+    }
+    @Override
+    public String toString() {
+        return  "fio='" + fio + '\'' +
+                ", number=" + number +
+                ", facultet='" + facultet + '\'' +
+                ", date='" + date + '\'' +
+                ", numberPhone=" + numberPhone;
     }
 }
 
