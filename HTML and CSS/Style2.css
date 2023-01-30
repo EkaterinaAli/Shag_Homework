@@ -1,0 +1,25 @@
+.success {
+	color: green;
+}
+.error {
+	color: red;
+}
+.large {
+	font-size: 30px;
+}
+.small {
+	font-size: 20px;
+}
+
+.color{
+       color: pink;
+}
+
+.kursiv {
+       font-style: italic;
+}
+
+.stil {
+       font-family: Comic Sans MS;
+}
+
