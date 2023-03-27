@@ -1,0 +1,89 @@
+/*реализуйте возможность «перетаскивания» (Drag-and-Drop) для разных элементов. На начальной странице 
+представлены несколько блоков, каждый из которых может быть перемещен при помощи мыши 
+в произвольное место экрана.*/
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8" />
+ <title>Homework Drag-and-Drop</title>
+ <style>
+ body{
+ position: relative;
+ }
+ #div1 {
+ background-color: tomato;
+ border: 1px solid red;
+ border: 50%;
+ height: 100px;
+ width: 100px;
+ position: relative;
+ 
+ }
+ #div2 {
+ background-color: rgb(236, 240, 4);
+ border: 1px solid rgb(176, 212, 12);
+ border: 50%;
+ height: 100px;
+ width: 100px;
+ position: relative;
+ }
+ #div3 {
+ background-color: rgb(71, 255, 169);
+ border: 1px solid rgb(43, 255, 0);
+ border: 50%;
+ height: 100px;
+ width: 100px;
+ position: absolute;
+ 
+ }
+ </style>
+</head>
+<body>
+ <div id="div1"></div>
+ <div id="div2"></div>
+ <div id="div3"></div>
+ <script>
+ var isDrag1 = false;
+ div1.addEventListener("mousedown",
+ function(){ isDrag1 = true })
+ document.addEventListener("mouseup",
+ function(){ isDrag1 = false })
+ document.addEventListener("mousemove",
+ function(e){
+
+ if(isDrag1){
+ div1.style.left = (e.pageX -50)+ "px";
+ div1.style.top = (e.pageY-100) + "px";
+ }
+ })
+
+ var isDrag2 = false;
+ div2.addEventListener("mousedown",
+ function(){ isDrag2 = true })
+ document.addEventListener("mouseup",
+ function(){ isDrag2 = false })
+ document.addEventListener("mousemove",
+ function(e){
+
+ if(isDrag2){
+ div2.style.left = (e.pageX-50) + "px";
+ div2.style.top = (e.pageY-200) + "px";
+ }
+ })
+
+ var isDrag3 = false;
+ div3.addEventListener("mousedown",
+ function(){ isDrag3 = true })
+ document.addEventListener("mouseup",
+ function(){ isDrag3 = false })
+ document.addEventListener("mousemove",
+ function(e){
+
+ if(isDrag3){
+ div3.style.left = (e.pageX-50) + "px";
+ div3.style.top = (e.pageY-50) + "px";
+ }
+ })
+ </script>
+</body>
+</html>
