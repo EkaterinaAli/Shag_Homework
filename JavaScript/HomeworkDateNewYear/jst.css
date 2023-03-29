@@ -1,0 +1,23 @@
+table{
+    width: 500px;
+    border-style: ridge;
+    border-color: rgb(209, 204, 204);
+    border-width: medium;
+    padding: 4px;
+    border-spacing:20px 0px;
+}
+
+#tr1{
+    height: 40px;
+    width: auto;
+    background-color: rgb(123, 185, 255);
+    color: white;
+    font-size:150%;  
+    text-align: center;
+}
+#tr2{
+    height: 30px;
+    width: auto;
+    background-color: lightgray;
+    text-align: center;
+}

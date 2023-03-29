@@ -1,0 +1,31 @@
+
+<!doctype html />
+<html>
+<head>
+ <meta charset="utf-8" />
+ <title>Homework3</title>
+ <link rel ="stylesheet" href =jst.css > 
+</head> 
+<body>
+<script>let firstDate = new Date();
+        let nextYear = new Date("0/0/0");
+        nextYear.setFullYear(firstDate.getFullYear() + 1);
+        let days = Math.floor((nextYear - firstDate) / 1000 / 86400);
+        let hours = Math.floor(((nextYear - firstDate) / 1000 % 86400) / 3600);
+        let minutes = Math.floor(((nextYear - firstDate) / 1000 % 3600) / 60);
+        let seconds = Math.floor((nextYear - firstDate) / 1000 % 60);
+        
+        document.write('<table>' +
+            '<tr id="tr1">'+
+                '<td>'+ days + '</td>'+
+                '<td>' + hours + '</td>'+
+                '<td>' + minutes + '</td>'+
+                '<td>' + seconds + '</td>'+
+                '</tr>' +
+            '<tr id="tr2">'+
+                '<td> days </td><td> hours </td><td> minutes </td><td>seconds</td>'+ 
+                '</tr>'+
+                    '</table>')
+    </script>
+</body>
+</html>
